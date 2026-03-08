@@ -10,7 +10,7 @@ const Card = (props) => {
     <div className='absolute inset-0 bg-black/30 rounded-3xl z-10'></div>
 
     <div className='absolute top-0 p-4 flex flex-col h-full justify-between z-20'>
-        <h1 className='h-8 w-8 rounded-full bg-gray-100 text-black flex justify-center items-center font-semibold'>{props.id+1}</h1>
+        <h1 className='h-8 w-8 rounded-full bg-white text-violet-500 flex justify-center items-center font-semibold'>{props.id+1}</h1>
 
         <div className='text-white'>
             <p className='mb-9 text-sm text-gray-100'>

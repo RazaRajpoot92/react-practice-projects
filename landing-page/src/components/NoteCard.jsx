@@ -16,7 +16,7 @@ const NoteCard = (props) => {
 
             <p className="mt-2 text-gray-500 wrap-break-words">{props.item.details}</p>
             <button
-              onClick={() => removeNote(idx)}
+              onClick={() => props.fn(props.idx)}
               className="absolute bottom-3 left-18 bg-violet-500 text-white px-2 py-1 rounded-md text-sm"
             >
               Delete Note

@@ -3,10 +3,13 @@ import notebg from "../assets/note-bg.png";
 import NoteCard from "./NoteCard";
 
 const NoteForm = () => {
-  const [note, setNote] = useState([]);
+
+  const [note, setNote] = useState(JSON.parse(localStorage.getItem('notes')));
   const [heading, setHeading] = useState("");
   const [details, setDetails] = useState("");
 
+  
+  console.log(note)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (heading.length == 0 || details.length == 0 || heading.length > 25) {
@@ -18,6 +21,9 @@ const NoteForm = () => {
       setNote(copyNote);
       setDetails("");
       setHeading("");
+     const localNotes = JSON.parse( localStorage.getItem('notes'))
+     localNotes.push(copyNote)
+     localStorage.setItem("notes", JSON.stringify(localNotes))
     }
   };
 
@@ -33,6 +39,7 @@ const NoteForm = () => {
     const noteCopy = [...note];
     noteCopy.splice(id, 1);
     setNote(noteCopy);
+    localStorage.setItem('notes',JSON.stringify(noteCopy))
   };
 
   return (
@@ -64,7 +71,7 @@ const NoteForm = () => {
 
       <div className="px-5 py-10 gap-2 flex flex-wrap justify-center">
         {note.map((item, idx) => (
-          <NoteCard item = {item} key={idx} idx = {idx} />
+          <NoteCard fn={removeNote} item = {item} key={idx} idx = {idx} />
         ))}
       </div>
     </>

@@ -5,6 +5,7 @@ import IntroSection from './components/IntroSection'
 import BottomSection from './components/BottomSection'
 import Form from "./components/Form"
 import NoteApp from './components/NoteApp'
+import ProductSection from './components/ProductSection'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       
       <BottomSection />
       <NoteApp />
+      < ProductSection />
     </div>
   )
 }

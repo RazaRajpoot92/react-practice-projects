@@ -9,8 +9,6 @@ const BottomSection = () => {
             </svg>
         </div>
 
-
-        
         <div className=' w-full h-full  bg-linear-to-br from-orange-200 via-amber-300 to-yellow-300'></div>
     </div>
   )

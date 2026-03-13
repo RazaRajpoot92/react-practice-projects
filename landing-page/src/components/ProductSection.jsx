@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
+import { ContestStore } from '../context/ContextWrapper'
 
 const PRODUCT_API = "https://fakestoreapi.com/products"
 
 const ProductSection = () => {
 
     const [products, setProducts] = useState([])
+    const [darkTheme, setDarkTheme] = useContext(ContestStore)
 
     const getProducts = async ()=>{
         const response = await fetch(PRODUCT_API)
@@ -19,8 +21,8 @@ const ProductSection = () => {
     },[products])
 
   return (
-    <div className='mt-4 bg-gray-50'>
-        <h1 onClick={getProducts} className='bg-yellow-50 text-center text-4xl font-semibold'>Our <span className='text-violet-500'>Top</span> Products</h1>
+    <div className={` ${darkTheme?"dark":"light"}`}>
+        <h1 className={` ${darkTheme?"text-white":"text-black"} transition-all duration-400 text-center text-5xl font-semibold `}>Our <span className='text-violet-500'>Top</span> Products</h1>
         <div className='p-4 flex gap-4 justify-center flex-wrap'>
            {
             products.map((product)=>(

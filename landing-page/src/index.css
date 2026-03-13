@@ -124,3 +124,19 @@ body {
         --angle: 360deg;
     }
 }
+
+.dark{
+    background-color: #0B0F19;
+}
+
+.light{
+    background-color: #F9FAFB;
+    transition: all;
+    transition-duration: 400ms;
+}
+
+.dark, .light div{
+    color:rgb(24, 24, 24);
+    transition: all;
+    transition-duration: 400ms;
+}

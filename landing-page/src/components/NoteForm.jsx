@@ -49,7 +49,7 @@ const NoteForm = () => {
           <input
             onChange={(e) => handleInput(e)}
             value={heading}
-            className="border-2 w-125 p-2 rounded-md text-gray-500 focus:border-violet-500 outline-none"
+            className="border-2 w-125 p-2 rounded-md text-gray-600 focus:border-violet-500 outline-none"
             type="text"
             placeholder="Enter note heading"
           />
@@ -59,7 +59,7 @@ const NoteForm = () => {
             placeholder="Enter note details..."
             name=""
             id=""
-            className="outline-none text-gray-600 border-2 bg-gray-100 rounded-md min-h-50 p-2 focus:border-violet-500"
+            className="outline-none text-gray-600 border-2 rounded-md min-h-50 p-2 focus:border-violet-500"
           />
           <button className="bg-violet-500 py-2 text-white rounded-md">
             Add Note
@@ -67,7 +67,7 @@ const NoteForm = () => {
         </form>
       </div>
 
-      <div className="bg-gray-400 h-0.5 my-3"></div>
+
 
       <div className="px-5 py-10 gap-2 flex flex-wrap justify-center">
         {note.map((item, idx) => (

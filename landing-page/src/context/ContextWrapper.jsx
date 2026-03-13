@@ -3,8 +3,8 @@ import React, { createContext, useState } from 'react'
 export const ContestStore = createContext()
 
 const ContextWrapper = ({children}) => {
-
     const [darkTheme, setDarkTheme] = useState(false)
+    
 
   return (
     <>

@@ -9,7 +9,6 @@ const NoteForm = () => {
   const [details, setDetails] = useState("");
 
   
-  console.log(note)
   const handleSubmit = (e) => {
     e.preventDefault();
     if (heading.length == 0 || details.length == 0 || heading.length > 25) {

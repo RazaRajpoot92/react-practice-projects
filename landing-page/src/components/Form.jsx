@@ -1,18 +1,18 @@
 
-
+import { Link } from "react-router-dom"
 const Form = ()=>{
-
-    const handleSubmit = (e)=>{
-        e.preventDefault()
-        console.log(e)
-    }
 
     return (
         <div className="flex justify-center">
-            <form onSubmit={(e)=>handleSubmit(e)}>
-                <input className="rounded-lg border-2 border-gray-500 w-100 py-1 px-2 text-gray-500" type="text" placeholder="Enter your name" />
-                <button className="bg-black text-white px-4 py-1.5 border-2 rounded-lg ml-1">Submit</button>
-            </form>
+            <div className="flex justify-between px-5 bg-gray-900 border-white w-full border p-2 rounded-md">
+                <h1 className="text-violet-500 font-semibold">InspWork</h1>
+                <div className="flex gap-2 text-white">
+                    <Link to='/'>Home</Link>
+                    <Link to='/products'>Product</Link>
+                    <Link to='/mynote'>MyNote</Link>
+                </div>
+            </div>
+            
         </div>
     )
 }

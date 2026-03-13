@@ -3,6 +3,7 @@ import carImg from "../assets/car-img.png"
 import { useEffect, useRef } from 'react'
 import gsap from "gsap"
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import AnimCard from './AnimCard'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -28,7 +29,9 @@ const IntroSection = () => {
     <div className='h-[90vh] flex relative'>
         {/* divider */}
     
-        <div className='w-1/2 h-full'></div>
+        <div className='w-1/2 h-full'>
+        
+        </div>
 
         <div className='w-1/2 h-full flex items-center justify-center '>
             <img ref={imgRef} className='h-90 z-50' src={carImg} alt="" />

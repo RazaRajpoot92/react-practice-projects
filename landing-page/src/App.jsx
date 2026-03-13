@@ -1,25 +1,19 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import IntroSection from './components/IntroSection'
-import BottomSection from './components/BottomSection'
-import Form from "./components/Form"
-import NoteApp from './components/NoteApp'
-import ProductSection from './components/ProductSection'
+import {Routes, Route} from 'react-router-dom'
+import Home from './components/pages/Home'
+import Products from './components/pages/Products'
+import Form from './components/Form'
+import MyNote from './components/pages/MyNote'
+
 
 const App = () => {
   return (
-    <div className=' h-screen'>
-      <div className='p-4'>
-        <Navbar />
+    <div className=''>
         <Form />
-        <Hero />
-        <IntroSection />
-      </div>
-      
-      <BottomSection />
-      <NoteApp />
-      < ProductSection />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/products' element = {<Products />} />
+          <Route path='/mynote' element = {<MyNote />} />
+        </Routes>
     </div>
   )
 }

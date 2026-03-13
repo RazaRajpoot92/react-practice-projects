@@ -17,7 +17,7 @@ const Card = (props) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing deleniti veritatis minus aliquid, quis porro dolorem iusto numquam neque autem perspiciatis.
             </p>
             <div className='flex justify-between items-center'>
-                <button className='bg-violet-500 text-sm px-6 py-1 rounded-full'>
+                <button className='bg-white/30 text-black backdrop-blur-[1px] text-sm px-6 py-1 rounded-full'>
                     Satisfied
                 </button>
                 <ArrowRight size={20} color='white' />
